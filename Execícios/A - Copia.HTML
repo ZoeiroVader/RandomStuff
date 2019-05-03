@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PAi no seu ku</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+                <h1 class="text-center">kuck com k</h1>
+                <div class="form-group m-4">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Seu Nominho</small>
+                </div>
+                <div class="form-group">
+                  <label for="nc">Nota Continuada</label>
+                  <input type="number"
+                    class="form-control" name="nc" id="nc" aria-describedby="helpId" onchange="manda()">
+                  <small id="helpId" class="form-text text-muted">Sua nota Continuada</small>
+                </div>
+                <div class="form-group">
+                  <label for="ni">Nota Integrada</label>
+                  <input type="number"
+                    class="form-control" name="ni" id="ni" aria-describedby="helpId" placeholder="" onchange="manda()">
+                  <small id="helpId" class="form-text text-muted">Sua nota Integrada</small>
+                </div>
+                <div><h1 id="d"></h1></div>
+                <button type="button" class="btn btn-primary btn-block" onclick="manda()">Faz as maracutaia</button>
+                <button type="button" class="btn btn-primary btn-block" onclick="apaga()">Faz as maracutaia</button>
+        </div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+    <script>
+        function manda() {
+            var nf = ((nc.value * .4) + (ni.value * .6));
+            if (nf > 5) {
+                d.innerHTML=(`    
+            <strong class = "text-success">Olá ${nome.value}, sua nota é ${nf} </strong> 
+            `);
+            }
+            if (nf < 5) {
+                d.innerHTML=(`    
+            <strong class = "text-danger">Olá ${nome.value}, sua nota é ${nf} </strong> 
+            `);
+            }
+            
+        }
+        function apaga() {
+            nc.value = "";
+            ni.value = "";
+            nome.value = "";
+            d.innerHTML = ("");
+        }
+    </script>
+</html>

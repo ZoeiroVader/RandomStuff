@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PAi no seu ku</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+                <h1 class="text-center">kuck com k</h1>
+                <div class="form-group">
+                  <label for="time">(C)orações Das Boa 100% ATUALIZADO 2019 TUDO LIBERADO</label>
+                  <select class="form-control" name="time" id="time">
+                    <option value="Escolha o time CALAIO">| ESCOLHA SUA (c)ORAÇÃO |</option>
+                    <option value="eU cOLOCO dOIS">oNDE hOUVER UM PONTO</option>
+                    <option value="eU cOLOCO tREIX">oNDE hOUVER dOIS pONTOS</option>
+                    <option value="eU cOLOCO qUATRO">oNDE hOUVER tRES PONTOS</option>
+                    <option value="eU cOLOCO cINCO">oNDE hOUVER qUATRO PONTOS</option>
+                    <option value="shineeeeeeeeeeeeeeeeeeeeeeeeeeeEEEEEEEEEEEEEEEEEEEEEEeeee">oNDE hOUVER iNFINITOD PONTOS</option>
+                  </select>
+                </div>
+                <div><h1 id="d" class="text-center text-sucess"></h1></div>
+                <button type="button" class="btn btn-primary btn-block" onclick="manda()">Faz as maracutaia</button><br>
+
+                <h1 class="text-center">Add</h1>
+
+                <div class="form-group">
+                    <label for="nt">Novo Time</label>
+                    <input type="text"
+                    class="form-control" name="nt" id="nt" aria-describedby="helpId" placeholder="">
+                    <label for="nt">ZUERINAH</label>
+                    <input type="text"
+                    class="form-control" name="nt" id="tz" aria-describedby="helpId" placeholder="">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="add()">Faz as maracutaia 2</button>
+                </div>
+        <!-- jQuery -->
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+    <script>
+        function manda() {
+            d.innerHTML= (time.value);      
+        }
+        function add() {
+            time.innerHTML+=(`<option value="${tz.value}">${nt.value}</option>`);
+        }
+    </script>
+</html>

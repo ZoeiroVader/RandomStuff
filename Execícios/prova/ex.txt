@@ -1,0 +1,51 @@
+2. (75% da nota da prova) Camila Toa adora ir ao cinema e vai muito.
+ Camila sempre compra pipoca e refrigerante e, às vezes, um “combo” no qual também vem “M&M”. 
+ Ela quer saber quanto esse lazer custa a ela por ano. Assim, crie um programa que a ajude a descobrir isso.
+
+ 
+
+A tela do programa deve ter:
+
+- Uma caixa de edição que só aceite números, com a indicação “Quantas vezes vai ao cinema por mês”
+
+- Uma caixa de edição que só aceite números, com a indicação “Preço do ingresso”
+
+- Uma combo box com 4 itens, no quais o usuário apenas vê
+
+      #Economia! só o filme
+      Só pipoca
+      Pipoca e Refrigerante
+      Combo de Pipoca + Refri + M&M
+
+- Um botão “Calcular gastos com Cinema”
+
+ 
+
+Ao clicar no botão, deve aparecer na tela do programa uma frase de cor azul como esta:
+
+Camila, você gasta R$X por mês e R$Y por ano com suas idas ao cinema
+
+ 
+
+Defina você mesmo os preços dos itens (o 1º, é claro, é zero).
+
+ 
+
+Os valores na frase devem conter, necessariamente, 2 casas decimais (use a função toFixed()) do Javascript.
+
+ 
+
+Cálculo de X:
+
+
+Preço do ingresso / 2 (afinal ela é estudante e paga meia)
+
++
+
+Custo com comida
+
+tudo isso vezes a quantidade de vezes que vai no mês.
+
+ 
+
+Cálculo de Y:

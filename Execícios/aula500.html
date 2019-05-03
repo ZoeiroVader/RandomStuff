@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Xelenge!>-K</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" placeholder="deposito no cofrinho" id="qtd">
+<input type="text" placeholder="0" id="valor" value="0">
+
+<button onclick="deposita()">depositar </button>
+
+</body>
+<script>
+
+   function deposita() {
+       var v = eval(valor.value);
+       var q = eval(qtd.value);
+       valor.value = v+q;
+   }
+   
+</script>
+</html>

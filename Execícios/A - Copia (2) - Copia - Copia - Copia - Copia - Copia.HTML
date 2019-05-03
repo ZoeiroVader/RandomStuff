@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PAi no seu ku</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+          body{
+            overflow: hidden;
+          }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+          <h1 class="text-center rainbowText">Sou Randomico</h1>
+          <button type="button" name="green" id="green" class="btn btn-success btn-lg col-md-6" onclick="bipolar(green)">OI BB</button>
+          <button type="button" name="red" id="red" class="btn btn-danger btn-lg col-md-6 " onclick="bipolar(red)">PAUNOSEUKU</button>
+          <br><br><br>
+          <div class="form-group mt-2"><br>
+            <label for="w">Uma FRase Qulquer</label>
+            <input type="text" class="form-control" name="w" id="w" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Coloque uma frase separada por espaços o/</small>
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="escreve()">Fazer</button><br><br>
+          <button type="button" class="btn btn-warning btn-lg btn-block" onclick="rodando()">Roda Ai bro</button><br><br>
+          <div><h1 id="d" class="text-center"></h1></div>
+         </div>
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+    <script>
+        var v = 1;
+        var timer;
+        window.addEventListener("load", function() {
+          var elements = document.getElementsByClassName("rainbowText");
+          for (let i = 0; i < elements.length; i++) {
+            generateRainbowText(elements[i]);
+          }
+        });
+
+        function generateRainbowText(element) {
+          var text = element.innerText;
+          element.innerHTML = "";
+          for (let i = 0; i < text.length; i++) {
+            let charElem = document.createElement("span");
+            charElem.style.color = "hsl(" + (360 * i / text.length) + ",80%,50%)";
+            charElem.innerHTML = text[i];
+            element.appendChild(charElem);
+          }
+        }
+
+        function tag(frase) {
+          var tagHTML = [
+            "h3",
+            "h2",
+            "button",
+            "b","i","u"
+          ];
+          var n = Math.floor((Math.random() * tagHTML.length));
+          var tag = ``;
+          return `<${tagHTML[n]}>${frase}</${tagHTML[n]}> `;
+        }
+
+        function bipolar(color) {
+          
+          if (color == red) {
+            d.innerHTML= (`
+            <span class="text-danger">
+              ${
+                tag("E") +
+                tag("Dinheiro") +
+                tag("no") +
+                tag("meu") +
+                tag("Bolso")
+              }
+            </span>    
+            `);
+          }
+
+          if (color == green) {
+            d.innerHTML= (`
+              <span class="text-success">
+                ${
+                  tag("OI") +
+                  tag("BB") +
+                  tag("BORA") +
+                  tag("FECHA") +
+                  tag("??????")
+                }
+              </span>
+            `);
+          }
+        }
+
+        function escreve(){
+          d.innerHTML = ("");
+          var resultado = w.value.split(" ");
+          for (let i = 0; i < resultado.length; i++) {
+            d.innerHTML+= tag(resultado[i]);            
+          }
+          clearInterval(timer);
+        }
+
+        function turn(){
+          v++;
+          d.style.transform = `rotate(${v}deg)`;
+        }
+
+        function rodando() {
+          timer = setInterval(
+            function(){
+              v++;
+              d.style.transform = `rotate(${v}deg)`;
+            }, 20);
+        }
+    </script>
+</html>

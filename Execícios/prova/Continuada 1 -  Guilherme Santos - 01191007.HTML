@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AvaViação</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <style>
+        #d, #ad{
+          transition: all 1s;
+          opacity: 0;
+        }
+        </style>
+
+    </head>
+    <body>
+      
+        <div class="container">
+          <h1 class="text-center rainbowText text-uppercase">um programa que a ajude a descobrir isso.</h1>
+          <div class="form-group">
+            <label for="vezes">Quantas vezes vai ao cinema por mês?</label>
+            <input type="text" class="form-control" name="vezes" id="vezes" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Só diversão</small>
+          </div>
+          <div class="form-group">
+            <label for="pi">Preço do ingresso:</label>
+            <input type="text" class="form-control" name="pi" id="pi" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Que você paga meia :)</small>
+          </div>
+          <div class="form-group">
+            <label for="tg">Qual o tipo de gasto?</label>
+            <select class="form-control" name="tg" id="tg" onchange="show()">
+              <option value="0">Apenas me deleitar com a obra cinematografica</option>
+              <option value="10">me deleitar com a obra cinematografica e consumir grãos de Zea mays aquecidos</option>
+              <option value="20">me deleitar com a obra cinematografica, consumir grãos de Zea mays aquecidos, e libar uma deliosa bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar, e gás carbônico</option>
+              <option value="30">Tudo acima + Memes&Memes</option>
+              <option value="infinity">COMBO BREAKER COM TUDO INCLUSO 100% ATUALIZADO 2020 FULL HD 4K</option>
+              <option value="show">Adicione um combo não listado</option>
+            </select>
+          </div>
+          <div class="text-center"><h1 id="d" class="text-primary"></h1></div><br>
+          <button type="button" class="btn btn-primary btn-block " onclick="manda()">Calcular gastos com Cinema</button><br>
+          <div id="ad">
+            <div class="form-group">
+              <label for="nc">O nome do combo</label>
+              <input type="text" class="form-control" name="nc" id="nc" aria-describedby="helpId" placeholder="Ex: Batata + Mc">
+              <small id="helpId" class="form-text text-muted">O Nome</small>
+            </div>
+            <div class="form-group">
+              <label for="pc">O Preço do combo</label>
+              <input type="number"
+                class="form-control" name="pc" id="pc" aria-describedby="helpId" placeholder="Preco em R$">
+              <small id="helpId" class="form-text text-muted">Ex: 10</small>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" onclick="add()">Adicionar Combo</button><br>
+          </div>
+        </div>
+    </body>
+    <!--  só deixa o texto coloridinho -->
+    <script src="js/raibow.js"></script>
+    <!-- todas as funções utilizadas nesse programa -->
+    <script src="js/functions.js"></script>
+</html>

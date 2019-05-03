@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PAi no seu ku</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+                <h1 class="text-center">kuck com k</h1>
+                <div class="form-group">
+                  <label for="nome">Seu Name desu:</label>
+                  <input type="text"
+                    class="form-control" name="nome" id="nome" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">KAWAIIIII >.<</small>
+                </div>
+                <div class="form-group">
+                  <label for="p">O PRinciple</label>
+                  <select class="form-control" name="p" id="p">
+                    <option value="0">escolhe DESGRAÇA</option>
+                    <option value="1">processos e ferramentas</option>
+                    <option value="2">documentação abrangente</option>
+                    <option value="3">negociação de contratos</option>
+                    <option value="4">seguir um plano</option>
+                  </select>
+                </div>
+                <div><h1 id="d" class="text-center text-sucess"></h1></div>
+                <button type="button" class="btn btn-primary btn-block" onclick="manda()">#PARTIUAGILIDADE</button><br>
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+    <script>
+        function manda() {
+            var dizeres = [
+                "Escolhe uma opção válida bro",
+                "valorize processos e ferramentas e mais Indivíduos e interações",
+                "valorize menos documentação abrangente e mais Software em funcionamento",
+                "valorize menos negociação de contratos e negociação de contratos",
+                "valorize menos seguir um plano e mais responder a mudanças"
+            ];
+            d.innerHTML= (`Então, ${nome.value}, ${dizeres[p.value]}`);      
+        }
+        function add() {
+            time.innerHTML+=(`<option value="${tz.value}">${nt.value}</option>`);
+        }
+    </script>
+</html>
